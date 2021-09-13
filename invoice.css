@@ -1,0 +1,136 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 0.75;
+}
+.container {
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+button {
+  display: block;
+  float: right;
+  margin: 10px;
+  padding: 10px 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  gap: 40px;
+}
+.logo img {
+  width: 250px;
+  height: 200px;
+  align-self: center;
+}
+.extra_details {
+  text-align: right;
+}
+.res_table {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+}
+table {
+  border-top: 2px solid #000;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+table tr {
+  padding: 0.35em;
+}
+.row1 {
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+}
+#row2 {
+  border: 1px dashed #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+#row3 {
+  border: 1px solid #aaa;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.row4 {
+  border: 1px solid #aaa;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.row5 {
+  border: 3px double #aaa;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+table th,
+table td {
+  padding: 0.625em;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 1rem;
+}
+@media (min-width: 767px) and (max-width: 993px) {
+  body {
+    font-size: 13px;
+  }
+  .logo img {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 8px;
+  }
+  .container {
+    width: 100%;
+  }
+  .logo {
+    gap: 7px;
+  }
+  .logo img {
+    width: 100px;
+    height: 100px;
+  }
+  table {
+    border-top: 1px solid #000;
+  }
+  table th {
+    padding: 1rem 0;
+  }
+  table tr {
+    padding: 0.35em 0;
+  }
+  table th,
+  table td {
+    padding: 0.625em 0;
+  }
+}

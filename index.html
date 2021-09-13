@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Here we generate invoice bill payment bill"
+    />
+    <meta name="authors" content="Avinash Gummadi, Sai Kumar Avu" />
+    <title>The Experts Hub</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+
+    <link rel="icon" href="./logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <!-- Invoice -->
+    <div class="container">
+      <a href="history.html" target="_blank" class="history">INVOICE HISTORY</a>
+      <div class="header">
+        <h2>INVOICE TO CLIENT</h2>
+      </div>
+      <div id="form" class="form">
+        <div class="form-control">
+          <label for="username">Invoice ID</label>
+          <input type="text" placeholder="Invoice ID" id="invoice" required />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Name</label>
+          <input type="text" placeholder="Name" id="name" required />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Phone</label>
+          <input
+            type="text"
+            placeholder="7893541620"
+            id="phone"
+            the_experts_hub
+            required
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="des_set">
+          <div class="form-control">
+            <label for="username">Subject-1</label>
+            <input
+              type="text"
+              placeholder="Subject-1"
+              value="--"
+              id="subject"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Rate for Subject-1</label>
+            <input type="text" placeholder="Rate" id="rate" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Quantity for Subject-1</label>
+            <input type="text" placeholder="Quantity" id="quantity" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+        <div class="des_set">
+          <div class="form-control">
+            <label for="username">Subject-2</label>
+            <input
+              type="text"
+              value="--"
+              placeholder="Subject-2"
+              id="subject2"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Rate for Subject-2</label>
+            <input type="text" placeholder="Rate" id="rate2" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Quantity for Subject-2</label>
+            <input type="text" placeholder="Quantity" id="quantity2" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="username">Date</label>
+          <input type="date" placeholder="1:30pm" id="date" required />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Due Date</label>
+          <input type="date" placeholder="1:30pm" id="ddate" required />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <button type="submit" onclick="Invoice()">Generate Invoice</button>
+      </div>
+    </div>
+    <!-- payslip -->
+    <div class="container">
+      <a href="sliphistory.html" target="_blank" class="history"
+        >PAYMENT HISTORY</a
+      >
+      <div class="header">
+        <h2>PAYSLIP TO CLIENT</h2>
+      </div>
+      <div id="form" class="form">
+        <div class="form-control">
+          <label for="username">Payslip ID</label>
+          <input type="text" placeholder="Payslip ID" id="payslip" required />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Name</label>
+          <input type="text" placeholder="Name" id="sname" required />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="flex_class">
+          <div class="form-control">
+            <label for="username">Mobile</label>
+            <input type="tel" placeholder="7893541620" id="sphone" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Gpay</label>
+            <input type="tel" placeholder="Gpay num" id="sphone2" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="username">Email</label>
+          <input type="email" placeholder="email" id="semail" required />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="flex_class">
+          <div class="form-control">
+            <label for="username">Subject-1</label>
+            <input
+              type="text"
+              placeholder="Subject-1"
+              value="--"
+              id="ssubject"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Rate for Subject-1</label>
+            <input type="number" placeholder="Rate" id="srate" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+        <div class="flex_class">
+          <div class="form-control">
+            <label for="username">Total Response for Subject-1</label>
+            <input
+              type="number"
+              placeholder="TotalResponse"
+              id="tresponse"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Total Valid Response for Subject-1</label>
+            <input
+              type="number"
+              placeholder="Total Valid Response"
+              id="tvresponse"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+        <div class="flex_class">
+          <div class="form-control">
+            <label for="username">Bonus for subject-1</label>
+            <input type="number" value="0" id="bonus" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Salary Advance for subject-1</label>
+            <input type="number" value="0" id="sadvance" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+        <div class="flex_class">
+          <div class="form-control">
+            <label for="username">Subject-2</label>
+            <input
+              type="text"
+              placeholder="Subject-2"
+              value="--"
+              id="ssubject1"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Rate for Subject-2</label>
+            <input type="number" placeholder="Rate" id="srate1" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+        <div class="flex_class">
+          <div class="form-control">
+            <label for="username">Total Response for Subject-2</label>
+            <input
+              type="number"
+              placeholder="TotalResponse"
+              id="tresponse1"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Total Valid Response for Subject-2</label>
+            <input
+              type="number"
+              placeholder="Total Valid Response"
+              id="tvresponse1"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+        <div class="flex_class">
+          <div class="form-control">
+            <label for="username">Bonus for subject-2</label>
+            <input type="number" value="0" id="bonus1" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Salary Advance for subject-2</label>
+            <input type="number" value="0" id="sadvance1" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="username">Date</label>
+          <input type="date" placeholder="1:30pm" id="sdate" required />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <button type="submit" onclick="Slip()">Generate Payment Slip</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

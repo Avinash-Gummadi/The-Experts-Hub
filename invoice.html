@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Here we generate invoice bill payment bill"
+    />
+    <meta name="authors" content="Avinash Gummadi, Sai Kumar Avu" />
+    <title>Invoice</title>
+    <link rel="icon" href="./logo.jpg" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      integrity="sha384-aB2txH5fxVX7MqVLi9UwsHitqOIvNoq4J9aVwM/EhWHd0YtQNlKJI5fBc4fwgrrW"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./invoice.css" />
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <header>
+        <div class="top">
+          <div class="logo">
+            <img src="./logo.jpg" alt="" />
+            <div class="cmpny_details">
+              <h3>The Experts Hub</h3>
+              <p><strong>GSTIN </strong>8121068121</p>
+              <p>No 9/16, Rajiv Gandhi street</p>
+              <p>Kk Nagar,</p>
+              <p>Chennai</p>
+              <p>9010468079</p>
+              <p>8121068121</p>
+              <a href="#">theexpertshubin@gmail.com</a>
+            </div>
+          </div>
+          <div class="extra_details">
+            <p id="invoice1"></p>
+            <h5>DATE</h5>
+            <p id="date1"></p>
+            <h5>DUE DATE</h5>
+            <p id="date2">NULL</p>
+            <h5>BALANCE DUE</h5>
+            <p id="amount"></p>
+          </div>
+        </div>
+        <br />
+        <hr />
+      </header>
+      <section>
+        <div>
+          <button onclick="Print()">Print</button>
+          <h4>BILL TO</h4>
+          <h3 id="name1"></h3>
+          <p id="phone1"></p>
+          <br />
+        </div>
+        <div class="res_table">
+          <table>
+            <thead>
+              <tr class="row1">
+                <th scope="col">DESCRIPTION</th>
+                <th scope="col"></th>
+                <th scope="col">RATE</th>
+                <th scope="col">QTY</th>
+                <th scope="col">AMOUNT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="row2">
+                <td data-label="DESCRIPTION">
+                  <h5 id="subject1"></h5>
+                  <p>Payment for the Month of <span id="month1">--</span></p>
+                </td>
+                <td data-label="TOTAL"></td>
+                <td data-label="RATE" id="rate1"></td>
+                <td data-label="QTY" id="quantity1"></td>
+                <td data-label="AMOUNT" id="tamount"></td>
+              </tr>
+              <tr id="row3">
+                <td scope="row" data-label="DESCRIPTION">
+                  <h5 id="subject2"></h5>
+                  <p>Payment for the Month of <span id="month2">--</span></p>
+                </td>
+                <td data-label="TOTAL"></td>
+                <td data-label="RATE" id="rate2"></td>
+                <td data-label="QTY" id="quantity2"></td>
+                <td data-label="AMOUNT" id="tamount2"></td>
+              </tr>
+              <tr class="row4">
+                <td scope="row" data-label="DESCRIPTION"></td>
+                <td data-label="TOTAL">
+                  <h5>TOTAL</h5>
+                </td>
+                <td data-label="RATE" id="rate5"></td>
+                <td data-label="QTY" id="quantity5"></td>
+                <td data-label="AMOUNT" id="amount2"></td>
+              </tr>
+              <tr class="row5">
+                <td scope="row" data-label="DESCRIPTION"></td>
+                <td data-label="TOTAL">
+                  <h5>BALANCE DUE</h5>
+                </td>
+                <td data-label="RATE" id="rate6"></td>
+                <td data-label="QTY" id="quantity6"></td>
+                <td data-label="AMOUNT" id="amount3">
+                  <h3></h3>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <div class="bottom">
+          <h3>Payment Instructions</h3>
+          <h5>PAYPAL</h5>
+          <a href="#">yas.araf62@gmail.com</a>
+          <h5>BANK TRANSFER</h5>
+          <p>A/C No : 50100355276393</p>
+          <p>IFSC CODE : HDFC0004825</p>
+          <h5>BY CHECK</h5>
+          <p>Mohammad Yaseer Arafath</p>
+          <h5>OTHER</h5>
+          <p>GPAY/PHONEPAY/PAYTM/BHIM</p>
+          <p>yas.araf62@ybl</p>
+        </div>
+        <hr />
+        <p>
+          If have any complaints/Suggestion/Help feel free to message me at
+          8121068121
+        </p>
+      </section>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="invoice.js"></script>
+</html>

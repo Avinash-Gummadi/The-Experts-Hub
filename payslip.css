@@ -1,0 +1,168 @@
+.container {
+  width: 97%;
+  margin: auto;
+  overflow: hidden;
+}
+h2 {
+  text-align: center;
+  padding: 20px 0;
+}
+p {
+  margin: 0;
+}
+button {
+  display: block;
+  margin: auto;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.table-bordered {
+  border: 1px solid #ddd !important;
+}
+.table-responsive[data-pattern="priority-columns"] {
+  border: 2px solid #000;
+}
+.table-bordered {
+  border: none !important;
+  border-top: 2px solid #000 !important;
+}
+table {
+  text-align: center;
+}
+table caption {
+  font-size: 30px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 2rem;
+}
+.table-responsive[data-pattern="priority-columns"]
+  > .table-bordered
+  > thead
+  > tr
+  > th:last-child,
+.table-responsive[data-pattern="priority-columns"]
+  > .table-bordered
+  > tbody
+  > tr
+  > th:last-child,
+.table-responsive[data-pattern="priority-columns"]
+  > .table-bordered
+  > tfoot
+  > tr
+  > th:last-child,
+.table-responsive[data-pattern="priority-columns"]
+  > .table-bordered
+  > thead
+  > tr
+  > td:last-child,
+.table-responsive[data-pattern="priority-columns"]
+  > .table-bordered
+  > tbody
+  > tr
+  > td:last-child,
+.table-responsive[data-pattern="priority-columns"]
+  > .table-bordered
+  > tfoot
+  > tr
+  > td:last-child {
+  border-right: 1px solid #ddd;
+}
+.row {
+  margin-top: 20px;
+}
+/* .experthub {
+  position: absolute;
+  top: 30%;
+  right: 19%;
+} */
+.noborder {
+  border: none !important;
+  text-align: center;
+}
+.bg {
+  background: #716f6f;
+  font-weight: 900;
+  font-size: 12px;
+}
+.bg:hover > td {
+  background: #716f6f !important;
+}
+.worker {
+  float: left;
+  margin-left: 10%;
+}
+.authority {
+  float: right;
+}
+.authority img {
+  width: 200px;
+  height: 55.39px;
+  margin-left: -49px;
+}
+@media (min-width: 767px) and (max-width: 993px) {
+  body {
+    font-size: 13px;
+  }
+  .container {
+    width: 99%;
+  }
+  .table-bordered {
+    border-top: 1px solid #000 !important;
+  }
+  th,
+  td {
+    padding: 15px 0 !important;
+    white-space: normal !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 7px;
+  }
+  .container {
+    width: 100%;
+  }
+  .table-responsive[data-pattern="priority-columns"] {
+    border: 1px solid #000;
+  }
+  .table-bordered {
+    border-top: 1px solid #000 !important;
+  }
+  th,
+  td {
+    padding: 14px 0 !important;
+    white-space: normal !important;
+  }
+  .experthub {
+    right: 16%;
+  }
+  .bg {
+    font-size: 7px;
+  }
+  table caption {
+    font-size: 18px;
+  }
+  .authority img {
+    width: 160px;
+    height: 44.31px;
+    margin-left: -49px;
+  }
+  @media screen and (max-width: 450px) {
+    .experthub {
+      display: none;
+    }
+  }
+}
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}

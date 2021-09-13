@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home {
+  position: absolute;
+  top: 1%;
+  right: 2%;
+}
+
+.container {
+  overflow: hidden;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 50%;
+}
+
+.header {
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 20px 40px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+img {
+  width: 50px;
+  vertical-align: top;
+  display: inherit;
+}
+
+p a {
+  text-decoration: none;
+  background-color: #397dd6;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  margin-left: 15px;
+}
+
+p a:hover {
+  background-color: #fff;
+  color: blue;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  flex: 50%;
+}
+.des_set {
+  display: flex;
+}
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+.flex_class {
+  display: flex;
+  gap: 0.5rem;
+}
+.form button {
+  background-color: #397dd6;
+  border: 5px solid;
+  border-radius: 10px;
+  color: #fff;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.form button a {
+  text-decoration: none;
+  color: white;
+}
+.history {
+  padding: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .container {
+    flex: 52%;
+  }
+  .des_set,
+  .flex_class {
+    display: block;
+  }
+}

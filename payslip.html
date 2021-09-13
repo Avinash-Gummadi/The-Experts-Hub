@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Here we generate invoice bill payment bill"
+    />
+    <meta name="authors" content="Avinash Gummadi, Sai Kumar Avu" />
+    <title>payslip</title>
+    <link rel="icon" href="./logo.jpg" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+      integrity="sha384-Ej0hUpn6wbrOTJtRExp8jvboBagaz+Or6E9zzWT+gHCQuuZQQVZUcbmhXQzSG17s"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/rwd.table.min.css"
+      integrity="sha384-UOFV00AZE/s7hwUmwzvguzzUIp3zeHtCAMtt+NZXFY/XYmIPNkTimoeMp29qQEvm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./payslip.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <section>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="table-responsive" data-pattern="priority-columns">
+              <table class="table table-bordered table-hover">
+                <caption class="text-center">
+                  Payment Slip
+                </caption>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th data-priority="1"></th>
+                    <th data-priority="2"></th>
+                    <th data-priority="3"></th>
+                    <th class="noborder"></th>
+                    <th class="noborder"></th>
+                    <th class="noborder"></th>
+                    <th class="noborder">The Experts Hub</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b>Name:</b></td>
+                    <td id="sname">Not specified</td>
+                    <td>Mobile:</td>
+                    <td id="sphone">Not specified</td>
+                    <td class="noborder"></td>
+                    <td class="noborder"></td>
+                    <td class="noborder"></td>
+                    <td class="noborder">
+                      No 9/16, Rajiv Gandhi street, Kk Nagar,
+                    </td>
+                    <td class="noborder"></td>
+                    <!-- <div class="experthub">THE EXPERTS HUB</div> -->
+                  </tr>
+                  <tr>
+                    <td><b>Email:</b></td>
+                    <td id="semail">Not specified</td>
+                    <td>Google Pay:</td>
+                    <td id="sphone2">--</td>
+                    <td class="noborder"></td>
+                    <td class="noborder"></td>
+                    <td class="noborder"></td>
+                    <td class="noborder">
+                      <p>Chennai-600078</p>
+                      <p>9010468079,8121068121</p>
+                    </td>
+                    <td class="noborder"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="noborder"></td>
+                    <td class="noborder"></td>
+                    <td class="noborder"></td>
+                    <td class="noborder">theexpertshubin@gmail.com</td>
+                    <td class="noborder"></td>
+                    <!-- <td></td> -->
+                  </tr>
+                  <tr class="bg">
+                    <td>Month</td>
+                    <td>Subject</td>
+                    <td>Total Response</td>
+                    <td>Total Valid Response</td>
+                    <td>Rate</td>
+                    <td>Bonus</td>
+                    <td>Total Earnings</td>
+                    <td>Salary Advance</td>
+                    <td>Net Amount Payable</td>
+                  </tr>
+                  <tr id="first_sub">
+                    <td>
+                      <span id="smonth1"></span> - <span id="syear1"></span>
+                    </td>
+                    <td id="ssubject">Null</td>
+                    <td id="tresponse">Null</td>
+                    <td id="tvresponse">Null</td>
+                    <td id="srate">Null</td>
+                    <td id="bonus">Null</td>
+                    <td id="tearnings">Null</td>
+                    <td id="sadvance">Null</td>
+                    <td id="netamount">Null</td>
+                  </tr>
+                  <tr id="second_sub">
+                    <td>
+                      <span id="smonth2"></span> - <span id="syear2"></span>
+                    </td>
+                    <td id="ssubject1">Null</td>
+                    <td id="tresponse1">Null</td>
+                    <td id="tvresponse1">Null</td>
+                    <td id="srate1">Null</td>
+                    <td id="bonus1">Null</td>
+                    <td id="tearnings1">Null</td>
+                    <td id="sadvance1">Null</td>
+                    <td id="netamount1">Null</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="worker">
+          <p>WORKER SIGN</p>
+        </div>
+        <div class="authority">
+          <p>AUTHORITY SIGN</p>
+          <img src="./authority_sign.jpg" alt="" />
+        </div>
+      </section>
+    </div>
+    <button onclick="Print()">Print</button>
+    <script type="text/javascript" src="payslip.js"></script>
+  </body>
+</html>

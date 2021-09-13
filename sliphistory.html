@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Payment history is stored here" />
+    <meta name="authors" content="Avinash Gummadi, Sai Kumar Avu" />
+    <title>Payment History</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style media="screen">
+      .container {
+        max-width: 95%;
+      }
+      td,
+      th {
+        border: 1px solid #dee2e6;
+      }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <table class="table">
+        <thead>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>phone</th>
+          <th>Email</th>
+          <th>Subject-1</th>
+          <th>Amount-1</th>
+          <th>Subject-2</th>
+          <th>Amount-2</th>
+          <th>Date</th>
+        </thead>
+        <tbody id="tbody1"></tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="sliphistory.js"></script>
+  </body>
+</html>
